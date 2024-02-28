@@ -38,6 +38,9 @@ const items = [
 
 // Omit the 'age' element
 
-const person = items // append your code here
+const person = items.filter(e => e[0] !== 'age').reduce((prev, curr) => {
+	prev[curr[0]] = curr[1]
+	return prev
+}, {}) // append your code here
 
 test("Problem 4", person)

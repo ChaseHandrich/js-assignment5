@@ -49,6 +49,7 @@ const strings = [
 	'"firstName":"Mace","lastName":"Windu","age":53,"occupation":"Jedi","homePlanet":"Haruun Kal"'
 ]
 
-const jedi = strings // append your code here
+const jedi = strings.map(s => JSON.parse(`{${s}}`)).filter(j => j.occupation ==='Jedi') // append your code here
+
 
 test("Problem 2", jedi)
